@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6843958001187647"
+        crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpeninYoutube - Create Pretty Youtube-Opening Links</title>
+    <meta name="description"
+        content="Convert browser-opening links to youtube-opening links that look like the originals. Free, fast, and easy YouTube link converter.">
+    <meta name="keywords"
+        content="YouTube links, app-opening links, YouTube converter, link generator, YouTube app links">
+    <meta name="author" content="OpeninYoutube">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://openinyoutube.com/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://openinyoutube.com/">
+    <meta property="og:title" content="OpeninYoutube - Create Pretty Youtube-Opening Links">
+    <meta property="og:description"
+        content="Convert browser-opening links to youtube-opening links that look like the originals.">
+    <meta property="og:image" content="https://openinyoutube.com/logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://openinyoutube.com/">
+    <meta property="twitter:title" content="OpeninYoutube - Create Pretty Youtube-Opening Links">
+    <meta property="twitter:description"
+        content="Convert browser-opening links to youtube-opening links that look like the originals.">
+    <meta name="google-adsense-account" content="ca-pub-6843958001187647">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6843958001187647"
+        crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #ffffff;
+            --bg-secondary: #f8fafc;
+            --text: #0f172a;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --card-bg: #ffffff;
+            --nav-bg: rgba(255, 255, 255, 0.88);
+            --accent: #ef4444;
+            --accent-hover: #dc2626;
+            --input-bg: #ffffff;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+            --shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.08);
+        }
+
+        [data-theme="dark"] {
+            --bg: #0f172a;
+            --bg-secondary: #1e293b;
+            --text: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --card-bg: #1e293b;
+            --nav-bg: rgba(15, 23, 42, 0.88);
+            --input-bg: #1e293b;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.3);
+            --shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.4);
+        }
+
+        *,
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        /* ── Navbar ── */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: var(--nav-bg);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border-bottom: 1px solid var(--border);
+            transition: all 0.3s;
+        }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            height: 64px;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            text-decoration: none;
+        }
+
+        .nav-logo img {
+            height: 32px;
+        }
+
+        .nav-logo span {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1.75rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--accent);
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 0.9rem;
+        }
+
+        .theme-toggle {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            color: var(--text);
+            padding: 0.38rem 0.6rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.2s;
+        }
+
+        .theme-toggle:hover {
+            border-color: var(--accent);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+            color: var(--text);
+        }
+
+        .mobile-menu {
+            display: none;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+            padding: 1rem 1.5rem;
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 0.6rem 0;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .mobile-menu a:last-child {
+            border-bottom: none;
+        }
+
+        .mobile-menu a.active {
+            color: var(--accent);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .mobile-menu.open {
+                display: block;
+            }
+        }
+
+        /* ── Hero ── */
+        .hero {
+            position: relative;
+            overflow: hidden;
+            min-height: 72vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem 1.5rem;
+            text-align: center;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            background: linear-gradient(160deg, #fff1f2 0%, #fef2f2 45%, #ffffff 100%);
+        }
+
+        [data-theme="dark"] .hero-bg {
+            background: linear-gradient(160deg, #1c0808 0%, #1e293b 55%, #0f172a 100%);
+        }
+
+        .hero-blob1 {
+            position: absolute;
+            width: 700px;
+            height: 700px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(239, 68, 68, 0.15) 0%, transparent 70%);
+            top: -250px;
+            right: -150px;
+            z-index: 0;
+            animation: blobFloat 10s ease-in-out infinite;
+        }
+
+        .hero-blob2 {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(239, 68, 68, 0.08) 0%, transparent 70%);
+            bottom: -200px;
+            left: -100px;
+            z-index: 0;
+            animation: blobFloat 12s ease-in-out infinite reverse;
+        }
+
+        @keyframes blobFloat {
+
+            0%,
+            100% {
+                transform: translateY(0) scale(1)
+            }
+
+            50% {
+                transform: translateY(28px) scale(1.04)
+            }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 780px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: rgba(239, 68, 68, 0.1);
+            color: var(--accent);
+            padding: 0.28rem 0.9rem;
+            border-radius: 999px;
+            font-size: 0.76rem;
+            font-weight: 700;
+            margin-bottom: 1.4rem;
+            border: 1px solid rgba(239, 68, 68, 0.22);
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.4rem, 6vw, 4rem);
+            font-weight: 900;
+            line-height: 1.12;
+            color: var(--text);
+            margin-bottom: 1.1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .hero h1 .red {
+            color: var(--accent);
+        }
+
+        .hero-sub {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            max-width: 500px;
+            margin: 0 auto 2.4rem;
+            line-height: 1.72;
+        }
+
+        /* ── Converter Box ── */
+        .converter-box {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow-hover);
+            max-width: 640px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .converter-box label {
+            display: block;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.07em;
+        }
+
+        .input-row {
+            display: flex;
+            gap: 0.6rem;
+        }
+
+        .link-input {
+            flex: 1;
+            padding: 0.8rem 1.1rem;
+            background: var(--bg-secondary);
+            color: var(--text);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            font-size: 0.92rem;
+            outline: none;
+            transition: border-color 0.2s;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .link-input:focus {
+            border-color: var(--accent);
+        }
+
+        .link-input::placeholder {
+            color: var(--text-muted);
+        }
+
+        .btn-paste {
+            background: var(--text);
+            color: var(--bg);
+            border: none;
+            border-radius: 12px;
+            padding: 0.8rem 1.4rem;
+            font-weight: 700;
+            font-size: 0.88rem;
+            cursor: pointer;
+            transition: opacity 0.2s, transform 0.1s;
+            white-space: nowrap;
+        }
+
+        .btn-paste:hover {
+            opacity: 0.85;
+            transform: scale(1.02);
+        }
+
+        /* Result area */
+        .result-area {
+            margin-top: 1.2rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1rem 1.2rem;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            word-break: break-all;
+            min-height: 48px;
+            display: flex;
+            align-items: center;
+            transition: border-color 0.2s;
+        }
+
+        .result-area.has-result {
+            border-color: var(--accent);
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .result-area .placeholder {
+            font-style: italic;
+        }
+
+        /* Action buttons */
+        .action-row {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 1.1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-action {
+            flex: 1;
+            padding: 0.72rem 1rem;
+            border-radius: 12px;
+            border: none;
+            font-weight: 700;
+            font-size: 0.88rem;
+            cursor: pointer;
+            transition: opacity 0.2s, transform 0.1s;
+        }
+
+        .btn-copy {
+            background: var(--accent);
+            color: white;
+        }
+
+        .btn-test {
+            background: var(--text);
+            color: var(--bg);
+        }
+
+        .btn-clear {
+            background: var(--bg-secondary);
+            color: var(--text-muted);
+            border: 1px solid var(--border);
+        }
+
+        .btn-action:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+
+        .btn-action:not(:disabled):hover {
+            opacity: 0.88;
+            transform: scale(1.02);
+        }
+
+        /* Toast */
+        #toast {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: #18181b;
+            color: white;
+            padding: 0.7rem 1.4rem;
+            border-radius: 12px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            z-index: 999;
+            pointer-events: none;
+        }
+
+        #toast.show {
+            transform: translateX(-50%) translateY(0);
+        }
+
+        /* ── How-to section ── */
+        .section {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
+        }
+
+        .section-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            color: var(--accent);
+            text-transform: uppercase;
+            margin-bottom: 0.4rem;
+        }
+
+        .section-title {
+            font-size: 1.65rem;
+            font-weight: 800;
+            color: var(--text);
+            margin-bottom: 0.4rem;
+        }
+
+        .divider {
+            width: 44px;
+            height: 3px;
+            background: var(--accent);
+            border-radius: 99px;
+            margin-bottom: 1.8rem;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.4rem;
+        }
+
+        .step-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 1.6rem;
+            box-shadow: var(--shadow);
+            transition: transform 0.25s, box-shadow 0.25s;
+        }
+
+        .step-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #ef4444, #b91c1c);
+            color: white;
+            font-weight: 800;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .step-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 0.4rem;
+        }
+
+        .step-desc {
+            font-size: 0.86rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* ── Supported formats ── */
+        .formats-section {
+            background: var(--bg-secondary);
+            padding: 4rem 1.5rem;
+        }
+
+        .formats-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .format-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-top: 1.5rem;
+        }
+
+        .chip {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            padding: 0.4rem 1rem;
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .chip svg {
+            color: #22c55e;
+            width: 14px;
+            height: 14px;
+            flex-shrink: 0;
+        }
+
+        /* ── Why section ── */
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.2rem;
+            margin-top: 1.5rem;
+        }
+
+        .why-card {
+            display: flex;
+            gap: 0.9rem;
+            align-items: flex-start;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 1.2rem;
+        }
+
+        .why-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(239, 68, 68, 0.1);
+        }
+
+        .why-icon svg {
+            width: 18px;
+            height: 18px;
+            color: var(--accent);
+        }
+
+        .why-text {
+            font-size: 0.87rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            padding-top: 0.15rem;
+        }
+
+        .why-text strong {
+            display: block;
+            color: var(--text);
+            font-weight: 700;
+            margin-bottom: 0.15rem;
+            font-size: 0.9rem;
+        }
+
+        /* ── Footer ── */
+        footer {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border);
+            padding: 2.5rem 1.5rem;
+        }
+
+        .footer-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-brand span {
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--text);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        .footer-copy {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ── Navbar ── -->
+    <nav>
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">
+                <img src="logo.png" alt="OpeninYoutube">
+                <span>OpeninYoutube</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="solution.html">Solution</a>
+                <a href="blog.html">Blog</a>
+                <a href="About.html">About</a>
+                <a href="Contact.html">Contact</a>
+                <a href="Privacy-and-Terms.html">Privacy &amp; Terms</a>
+                <a href="Disclaimer.html">Disclaimer</a>
+            </div>
+            <div class="nav-right">
+                <button class="theme-toggle" id="themeToggle" title="Toggle dark mode">🌙</button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path id="icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                        <path id="icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html" class="active">Home</a>
+            <a href="solution.html">Solution</a>
+            <a href="blog.html">Blog</a>
+            <a href="About.html">About</a>
+            <a href="Contact.html">Contact</a>
+            <a href="Privacy-and-Terms.html">Privacy &amp; Terms</a>
+            <a href="Disclaimer.html">Disclaimer</a>
+        </div>
+    </nav>
+
+    <!-- ── Hero ── -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-blob1"></div>
+        <div class="hero-blob2"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <svg width="12" height="12" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                        d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
+                        clip-rule="evenodd" />
+                </svg>
+                Free YouTube Link Converter
+            </div>
+            <h1>Create Pretty <span class="red">Youtube-Opening</span> Links</h1>
+            <p class="hero-sub">Convert browser-opening links to youtube-opening links that look like the originals —
+                free, fast, and instant.</p>
+
+            <!-- Converter -->
+            <div class="converter-box">
+                <label for="linkPasteInput">Paste your YouTube link below</label>
+                <div class="input-row">
+                    <input type="text" id="linkPasteInput" class="link-input"
+                        placeholder="e.g. https://youtube.com/watch?v=dQw4w9WgXcQ" autocomplete="off"
+                        spellcheck="false">
+                    <button class="btn-paste" id="pasteBtn">Paste</button>
+                </div>
+
+                <div class="result-area" id="resultArea">
+                    <span class="placeholder" id="resultPlaceholder">Your converted link will appear here…</span>
+                    <span id="resultUrl" class="hidden"></span>
+                </div>
+
+                <div class="action-row">
+                    <button class="btn-action btn-copy" id="copyBtn" disabled>Copy Link</button>
+                    <button class="btn-action btn-test" id="testBtn" disabled>Test Link ↗</button>
+                    <button class="btn-action btn-clear" id="clearBtn" disabled>Clear</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── How to use ── -->
+    <section class="section">
+        <div class="section-label">Getting Started</div>
+        <div class="section-title">How to use OpeninYoutube?</div>
+        <div class="divider"></div>
+        <div class="steps-grid">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <div class="step-title">Copy a YouTube link</div>
+                <p class="step-desc">Copy any YouTube video, shorts, channel, or playlist link from your browser or the
+                    YouTube app.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-title">Paste &amp; Convert</div>
+                <p class="step-desc">Paste the link in the input field above and it will be instantly converted to an
+                    app-opening link.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <div class="step-title">Copy &amp; Share</div>
+                <p class="step-desc">Copy the generated OpeninYoutube link and share it in your bio, posts, or messages.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- AdSense Top Unit -->
+    <div style="margin: 0 auto 4rem; text-align: center; max-width: 900px; padding: 0 1.5rem;">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6843958001187647"
+            data-ad-slot="1111111111" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
+    <!-- ── How it helps ── -->
+    <section class="section" style="padding-top: 0;">
+        <div class="section-label">Why It Matters</div>
+        <div class="section-title">How does OpeninYoutube help?</div>
+        <div class="divider"></div>
+        <div class="why-grid">
+            <div class="why-card">
+                <div class="why-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                    </svg></div>
+                <div class="why-text"><strong>Higher Click-Through Rate</strong>When a follower clicks a link in your
+                    bio they go directly into the YouTube app — not the browser — increasing engagement by up to 3×.
+                </div>
+            </div>
+            <div class="why-card">
+                <div class="why-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg></div>
+                <div class="why-text"><strong>Trusted Links</strong>Our links look identical to original YouTube links,
+                    so followers trust them and are more likely to click.</div>
+            </div>
+            <div class="why-card">
+                <div class="why-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                    </svg></div>
+                <div class="why-text"><strong>Reduces Drop-Off</strong>Opening in a browser creates friction.
+                    App-opening links remove that friction for the follower — boosting conversions.</div>
+            </div>
+            <div class="why-card">
+                <div class="why-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg></div>
+                <div class="why-text"><strong>Completely Free</strong>All features — unlimited conversions, instant
+                    results, no sign-up required — are 100% free, forever.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Supported formats ── -->
+    <div class="formats-section">
+        <div class="formats-inner">
+            <div class="section-label">Compatibility</div>
+            <div class="section-title">Supported YouTube Link Formats</div>
+            <div class="divider"></div>
+            <div class="format-chips">
+                <div class="chip"><svg fill="none" stroke="currentColor" viewBox="0 0 16 12">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 5.917 5.724 10.5 15 1.5" />
+                    </svg>youtube.com/watch?v=VIDEO_ID</div>
+                <div class="chip"><svg fill="none" stroke="currentColor" viewBox="0 0 16 12">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 5.917 5.724 10.5 15 1.5" />
+                    </svg>youtu.be/VIDEO_ID</div>
+                <div class="chip"><svg fill="none" stroke="currentColor" viewBox="0 0 16 12">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 5.917 5.724 10.5 15 1.5" />
+                    </svg>youtube.com/shorts/SHORT_ID</div>
+                <div class="chip"><svg fill="none" stroke="currentColor" viewBox="0 0 16 12">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 5.917 5.724 10.5 15 1.5" />
+                    </svg>youtube.com/channel/CHANNEL_ID</div>
+                <div class="chip"><svg fill="none" stroke="currentColor" viewBox="0 0 16 12">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 5.917 5.724 10.5 15 1.5" />
+                    </svg>youtube.com/@USERNAME</div>
+                <div class="chip"><svg fill="none" stroke="currentColor" viewBox="0 0 16 12">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 5.917 5.724 10.5 15 1.5" />
+                    </svg>m.youtube.com/...</div>
+                <div class="chip"><svg fill="none" stroke="currentColor" viewBox="0 0 16 12">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 5.917 5.724 10.5 15 1.5" />
+                    </svg>music.youtube.com/...</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AdSense Bottom Unit -->
+    <div style="margin: 4rem auto; text-align: center; max-width: 900px; padding: 0 1.5rem;">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6843958001187647"
+            data-ad-slot="2222222222" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
+    <!-- ── Footer ── -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <img src="logo.png" alt="OpeninYoutube" style="height: 28px;">
+                <span>OpeninYoutube</span>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="solution.html">Solution</a>
+                <a href="blog.html">Blog</a>
+                <a href="About.html">About</a>
+                <a href="Contact.html">Contact</a>
+                <a href="Privacy-and-Terms.html">Privacy &amp; Terms</a>
+                <a href="Disclaimer.html">Disclaimer</a>
+            </div>
+            <div class="footer-copy">© 2025 OpeninYoutube. All Rights Reserved.</div>
+        </div>
+    </footer>
+
+    <!-- Toast -->
+    <div id="toast">✅ Link copied!</div>
+
+    <script>
+        // ── Theme ──
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', savedTheme);
+        themeToggle.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+        themeToggle.addEventListener('click', () => {
+            const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+            themeToggle.textContent = next === 'dark' ? '☀️' : '🌙';
+        });
+
+        // ── Mobile menu ──
+        document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+            document.getElementById('mobileMenu').classList.toggle('open');
+            document.getElementById('icon-open').classList.toggle('hidden');
+            document.getElementById('icon-close').classList.toggle('hidden');
+        });
+
+        // ── Converter logic ──
+        const youtubePattern = /^(?:(?:https?:\/\/)?(?:www\.)?(?:youtube\.com|youtu\.be|m\.youtube\.com)\/|(?:https?:\/\/)?(?:www\.)?(?:music\.youtube\.com)\/)(?:(?:[\w-]+|user\/\w+|c\/\w+|channel\/[\w-]+|shorts\/[\w-]+|@[\w-]+))(?:\?\S*)?$/;
+
+        let currentUrl = '';
+
+        function convertLink(link) {
+            if (!link) { clearResult(); return; }
+            if (youtubePattern.test(link)) {
+                let result = link.replace(/^(\w+:|^)\/\//, '');
+                result = result.replace('www.', '');
+                result = result.replace('m.', '');
+                currentUrl = 'https://openin' + result;
+                showResult(currentUrl);
+            } else {
+                clearResult();
+            }
+        }
+
+        function showResult(url) {
+            document.getElementById('resultPlaceholder').classList.add('hidden');
+            const urlEl = document.getElementById('resultUrl');
+            urlEl.classList.remove('hidden');
+            urlEl.textContent = url;
+            document.getElementById('resultArea').classList.add('has-result');
+            document.getElementById('copyBtn').disabled = false;
+            document.getElementById('testBtn').disabled = false;
+            document.getElementById('clearBtn').disabled = false;
+        }
+
+        function clearResult() {
+            currentUrl = '';
+            document.getElementById('resultPlaceholder').classList.remove('hidden');
+            document.getElementById('resultUrl').classList.add('hidden');
+            document.getElementById('resultArea').classList.remove('has-result');
+            document.getElementById('copyBtn').disabled = true;
+            document.getElementById('testBtn').disabled = true;
+            document.getElementById('clearBtn').disabled = true;
+        }
+
+        // Live input
+        document.getElementById('linkPasteInput').addEventListener('input', (e) => {
+            convertLink(e.target.value.trim());
+        });
+
+        // Paste button
+        document.getElementById('pasteBtn').addEventListener('click', async () => {
+            try {
+                const text = await navigator.clipboard.readText();
+                document.getElementById('linkPasteInput').value = text;
+                convertLink(text.trim());
+            } catch (e) {
+                document.getElementById('linkPasteInput').focus();
+            }
+        });
+
+        // Copy
+        document.getElementById('copyBtn').addEventListener('click', () => {
+            if (!currentUrl) return;
+            navigator.clipboard.writeText(currentUrl).catch(() => { });
+            showToast('✅ Link copied to clipboard!');
+        });
+
+        // Test
+        document.getElementById('testBtn').addEventListener('click', () => {
+            if (currentUrl) window.open(currentUrl, '_blank');
+        });
+
+        // Clear
+        document.getElementById('clearBtn').addEventListener('click', () => {
+            document.getElementById('linkPasteInput').value = '';
+            clearResult();
+        });
+
+        // Toast
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            toast.textContent = msg;
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 2500);
+        }
+
+        // Scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((e, i) => {
+                if (e.isIntersecting) {
+                    e.target.style.animation = `fadeUp 0.5s ease ${i * 0.07}s both`;
+                    observer.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.step-card, .why-card').forEach(el => observer.observe(el));
+    </script>
+    <style>
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(22px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</body>
+
+</html>
