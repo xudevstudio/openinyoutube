@@ -1,0 +1,21 @@
+{
+  "name": "openinyoutube",
+  "version": "1.0.0",
+  "description": "Convert browser-opening links to youtube-opening links that look like the originals.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "keywords": [],
+  "author": "OpeninYoutube",
+  "license": "ISC",
+  "dependencies": {
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-hot-toast": "latest"
+  }
+}

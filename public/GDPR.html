@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6843958001187647"
+        crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDPR Compliance - OpeninYoutube</title>
+    <meta name="description"
+        content="Read about our GDPR compliance. We value your privacy and data protection rights under the General Data Protection Regulation.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg: #ffffff;
+            --bg-secondary: #f8fafc;
+            --text: #0f172a;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --nav-bg: rgba(255, 255, 255, 0.85);
+            --accent: #ef4444;
+        }
+
+        [data-theme="dark"] {
+            --bg: #0f172a;
+            --bg-secondary: #1e293b;
+            --text: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --nav-bg: rgba(15, 23, 42, 0.85);
+        }
+
+        *,
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            transition: background 0.3s, color 0.3s;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 1.5rem 1.5rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+            color: var(--text);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 2rem 0 1rem;
+            color: var(--text);
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 1.5rem 0 0.75rem;
+            color: var(--text);
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            color: var(--text-muted);
+        }
+
+        ul {
+            margin-bottom: 1.2rem;
+            padding-left: 1.5rem;
+            color: var(--text-muted);
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        strong {
+            color: var(--text);
+        }
+
+        /* ── Navbar ── */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: var(--nav-bg);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border);
+            transition: all 0.3s;
+        }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            height: 64px;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            text-decoration: none;
+        }
+
+        .nav-logo img {
+            height: 32px;
+        }
+
+        .nav-logo span {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--accent);
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 0.9rem;
+        }
+
+        .theme-toggle {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            color: var(--text);
+            padding: 0.4rem 0.6rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.2s;
+        }
+
+        .theme-toggle:hover {
+            border-color: var(--accent);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+            color: var(--text);
+        }
+
+        .mobile-menu {
+            display: none;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+            padding: 1rem 1.5rem;
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 0.6rem 0;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .mobile-menu a:last-child {
+            border-bottom: none;
+        }
+
+        .mobile-menu a.active {
+            color: var(--accent);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .mobile-menu.open {
+                display: block;
+            }
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border);
+            padding: 1.5rem 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .footer-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        .footer-copy {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-inner">
+            <a href="/" class="nav-logo">
+                <img src="logo.png" alt="OpeninYoutube">
+                <span>OpeninYoutube</span>
+            </a>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="solution.html">Solution</a>
+                <a href="blog.html">Blog</a>
+                <a href="About.html">About</a>
+                <a href="Contact.html">Contact</a>
+                <a href="Privacy-and-Terms.html">Privacy &amp; Terms</a>
+                <a href="GDPR.html" class="active">GDPR</a>
+                <a href="Disclaimer.html">Disclaimer</a>
+            </div>
+            <div class="nav-right">
+                <button class="theme-toggle" id="themeToggle" title="Toggle dark mode">🌙</button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path id="icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                        <path id="icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="/">Home</a>
+            <a href="solution.html">Solution</a>
+            <a href="blog.html">Blog</a>
+            <a href="About.html">About</a>
+            <a href="Contact.html">Contact</a>
+            <a href="Privacy-and-Terms.html">Privacy &amp; Terms</a>
+            <a href="GDPR.html" class="active">GDPR</a>
+            <a href="Disclaimer.html">Disclaimer</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>GDPR Compliance</h1>
+        <p>Last updated: March 04, 2026</p>
+        <p>The General Data Protection Regulation (GDPR) is a comprehensive data protection law that regulates the use
+            of personal data of EU residents. OpeninYoutube is committed to GDPR compliance across all our services.</p>
+
+        <h2>1. Data Protection Principles</h2>
+        <p>We adhere to the following principles when processing personal data:</p>
+        <ul>
+            <li><strong>Lawfulness, fairness, and transparency:</strong> Data is processed legally and transparently.
+            </li>
+            <li><strong>Purpose limitation:</strong> Data is collected for specified, explicit, and legitimate purposes.
+            </li>
+            <li><strong>Data minimization:</strong> We collect only the data necessary for the intended purpose.</li>
+            <li><strong>Accuracy:</strong> We take steps to ensure data is kept up to date.</li>
+            <li><strong>Storage limitation:</strong> Data is kept only as long as necessary.</li>
+            <li><strong>Integrity and confidentiality:</strong> Data is processed securely to protect against
+                unauthorized access.</li>
+        </ul>
+
+        <h2>2. Rights of Data Subjects</h2>
+        <p>Under GDPR, individuals have specific rights regarding their personal data. These include:</p>
+        <ul>
+            <li><strong>The right to be informed:</strong> Being told how your data is used.</li>
+            <li><strong>The right of access:</strong> Requesting a copy of the data we hold about you.</li>
+            <li><strong>The right to rectification:</strong> Asking us to correct inaccurate data.</li>
+            <li><strong>The right to erasure:</strong> Asking us to delete your data (the "right to be forgotten").</li>
+            <li><strong>The right to restrict processing:</strong> Limiting how we use your data.</li>
+            <li><strong>The right to data portability:</strong> Receiving your data in a machine-readable format.</li>
+            <li><strong>The right to object:</strong> Objecting to the use of your data for specific purposes.</li>
+        </ul>
+
+        <h2>3. Information We Process</h2>
+        <p>OpeninYoutube primarily processes YouTube URLs provided by users to generate deep links. We do not require
+            account registration or personal identity information for our core converter service. Any log data collected
+            is used solely for service optimization and security purposes as outlined in our Privacy Policy.</p>
+
+        <h2>4. Data Transfers</h2>
+        <p>As a global service, data may be processed on servers located outside of the European Economic Area (EEA). We
+            ensure that any such transfers are conducted in compliance with GDPR requirements, utilizing standard
+            contractual clauses or other approved mechanisms to ensure a high level of data protection.</p>
+
+        <h2>5. Contact for GDPR Inquiries</h2>
+        <p>If you have any questions regarding our GDPR compliance or wish to exercise any of your data subject rights,
+            please contact our Data Protection Office:</p>
+        <ul>
+            <li>By email: dev@tensixtechnologies.com</li>
+        </ul>
+
+        <!-- AdSense Content Unit -->
+        <div style="margin: 1rem auto 0; text-align: center; max-width: 728px; padding: 0 1.5rem;">
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6843958001187647"
+                data-ad-slot="1010101010" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <img src="logo.png" alt="OpeninYoutube" style="height: 28px;">
+                <span>OpeninYoutube</span>
+            </div>
+            <div class="footer-links">
+                <a href="/">Home</a>
+                <a href="solution.html">Solution</a>
+                <a href="blog.html">Blog</a>
+                <a href="About.html">About</a>
+                <a href="Contact.html">Contact</a>
+                <a href="Privacy-and-Terms.html">Privacy &amp; Terms</a>
+                <a href="GDPR.html">GDPR</a>
+                <a href="Disclaimer.html">Disclaimer</a>
+            </div>
+            <div class="footer-copy">© 2025 OpeninYoutube. All Rights Reserved.</div>
+        </div>
+    </footer>
+
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+
+        // Theme Toggle
+        themeToggle.addEventListener('click', () => {
+            const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+            themeToggle.textContent = next === 'dark' ? '☀️' : '🌙';
+        });
+        if (localStorage.getItem('theme') === 'dark') {
+            html.setAttribute('data-theme', 'dark');
+            themeToggle.textContent = '☀️';
+        }
+
+        // Mobile Menu
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const iconOpen = document.getElementById('icon-open');
+        const iconClose = document.getElementById('icon-close');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+            iconOpen.classList.toggle('hidden');
+            iconClose.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on click outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                mobileMenu.classList.remove('open');
+                iconOpen.classList.remove('hidden');
+                iconClose.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+
+</html>
