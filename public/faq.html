@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6843958001187647"
+        crossorigin="anonymous"></script>
+    <title>Frequently Asked Questions - OpeninYoutube</title>
+    <meta name="description"
+        content="Find answers to all your questions about OpeninYoutube. Learn about deep link permanence, safety, pricing, and analytics tracking.">
+    <meta name="keywords"
+        content="OpeninYoutube FAQ, deep link questions, YouTube link converter help, is OpeninYoutube safe, permanent YouTube links">
+    <meta name="author" content="OpeninYoutube">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="./faq.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="./faq.html">
+    <meta property="og:title" content="Frequently Asked Questions - OpeninYoutube">
+    <meta property="og:description" content="Find answers to all your questions about OpeninYoutube deep linking.">
+    <meta property="og:image" content="./logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #ffffff;
+            --bg-secondary: #f8fafc;
+            --text: #0f172a;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --card-bg: #ffffff;
+            --nav-bg: rgba(255, 255, 255, 0.88);
+            --accent: #ef4444;
+            --accent-hover: #dc2626;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08);
+        }
+
+        [data-theme="dark"] {
+            --bg: #0f172a;
+            --bg-secondary: #1e293b;
+            --text: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --card-bg: #1e293b;
+            --nav-bg: rgba(15, 23, 42, 0.88);
+        }
+
+        *,
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            transition: background 0.3s, color 0.3s;
+            line-height: 1.6;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: var(--nav-bg);
+            backdrop-filter: blur(18px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            height: 64px;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            text-decoration: none;
+        }
+
+        .nav-logo img {
+            height: 32px;
+        }
+
+        .nav-logo span {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1.75rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--accent);
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 0.9rem;
+        }
+
+        .theme-toggle {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            color: var(--text);
+            padding: 0.38rem 0.6rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .theme-toggle:hover {
+            border-color: var(--accent);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+            color: var(--text);
+        }
+
+        .mobile-menu {
+            display: none;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+            padding: 1rem 1.5rem;
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 0.6rem 0;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid var(--border);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .mobile-menu.open {
+                display: block;
+            }
+        }
+
+        .page-header {
+            background: var(--bg-secondary);
+            padding: 4rem 1.5rem 3rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--text);
+            margin-bottom: 1rem;
+        }
+
+        .page-header p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .content-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        .faq-item {
+            margin-bottom: 1.5rem;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            padding: 1.5rem;
+            background: none;
+            border: none;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.2s;
+        }
+
+        .faq-question:hover {
+            background: var(--bg-secondary);
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+            color: var(--text-muted);
+            font-size: 1rem;
+            line-height: 1.7;
+            display: none;
+        }
+
+        .faq-answer.open {
+            display: block;
+            border-top: 1px solid var(--border);
+            padding-top: 1.5rem;
+            margin-top: 0;
+        }
+
+        .faq-icon {
+            transition: transform 0.3s;
+        }
+
+        .faq-question.active .faq-icon {
+            transform: rotate(180deg);
+            color: var(--accent);
+        }
+
+        footer {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border);
+            padding: 1rem 1.5rem;
+        }
+
+        .footer-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-brand span {
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--text);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="nav-inner">
+            <a href="/" class="nav-logo">
+                <img src="logo.png" alt="OpeninYoutube">
+                <span>OpeninYoutube</span>
+            </a>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="features.html">Features</a>
+                <a href="how-it-works.html">How It Works</a>
+                <a href="faq.html" class="active">FAQ</a>
+                <a href="comparison.html">Compare</a>
+                <a href="blog.html">Blog</a>
+            </div>
+            <div class="nav-right">
+                <button class="theme-toggle" id="themeToggle" title="Toggle dark mode">🌙</button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path id="icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                        <path id="icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="/">Home</a>
+            <a href="features.html">Features</a>
+            <a href="how-it-works.html">How It Works</a>
+            <a href="faq.html" class="active">FAQ</a>
+            <a href="comparison.html">Compare</a>
+            <a href="blog.html">Blog</a>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="page-header">
+        <h1>Frequently Asked Questions</h1>
+        <p>Everything you need to know about app-opening YouTube links, how to use them, and why they matter for your
+            channel's growth.</p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="content-container">
+
+        <!-- Top AdSense Block -->
+        <div style="margin: 0 auto 2rem; text-align: center; max-width: 900px;">
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6843958001187647"
+                data-ad-slot="3333333333" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+        <div class="faq-list">
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Is OpeninYoutube completely free to use?
+                    <svg class="faq-icon" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes. OpeninYoutube is 100% free for everyone. There are no subscription tiers, no paywalls, and
+                        no hidden limitations on how many links you can generate or how much traffic you can drive
+                        through those links.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Do these links expire after a certain amount of time?
+                    <svg class="faq-icon" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <p>No, the links generated by OpeninYoutube are infinitely permanent. Because we do not store your
+                        links in a database (we use algorithmic intent routing based on the URL structure), your links
+                        will keep working forever as long as our service is active. You can safely embed them in your
+                        permanent social media bios or print materials.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Is it safe? Will Google penalize me?
+                    <svg class="faq-icon" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes, it is entirely safe. OpeninYoutube simply uses standard operating system intents natively
+                        provided by iOS and Android to launch applications. We do not do anything that violates
+                        YouTube's Terms of Service. In fact, Google encourages deep linking as it improves user
+                        experience. Your channel is completely safe.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    What happens if someone clicks on a desktop computer?
+                    <svg class="faq-icon" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <p>If a user clicks an OpeninYoutube link on a Mac, Windows PC, or any device that does not have the
+                        YouTube app installed, our system detects it instantly. They are automatically, seamlessly
+                        redirected to the standard web browser version of YouTube without seeing any error screens. You
+                        only ever need to share one link.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Do you track or sell user data?
+                    <svg class="faq-icon" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <p>No. We are staunch advocates for digital privacy. We do not inject tracking cookies, we do not
+                        require account creation, and we do not build behavioral profiles on the users who click through
+                        our links. This zero-baggage approach is also why our redirects are lightning fast.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Can I use this for YouTube Shorts, Channels, and Playlists?
+                    <svg class="faq-icon" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Absolutely. Our link parser supports all valid YouTube URL formats. Whether it's a standard video
+                        (<code>watch?v=</code>), a Short (<code>/shorts/</code>), a user channel
+                        (<code>/@username</code>), or a community playlist, OpeninYoutube will generate a working deep
+                        link that routes the user to the exact right page inside their native app.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Why not just use bit.ly or a standard URL shortener?
+                    <svg class="faq-icon" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Standard URL shorteners do not execute mobile deep links. If you paste a bit.ly link into
+                        Instagram, it will open in Instagram's internal browser, breaking engagement. Additionally, our
+                        links maintain the word "youtube" in the structure, which yields a much higher Click-Through
+                        Rate (CTR) because viewers instinctively trust it more than a random string of characters.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bottom AdSense Block -->
+        <div style="margin: 2rem auto 0; text-align: center; max-width: 900px;">
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6843958001187647"
+                data-ad-slot="4444444444" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <img src="logo.png" alt="OpeninYoutube" style="height: 28px;">
+                <span>OpeninYoutube</span>
+            </div>
+            <div class="footer-links">
+                <a href="/">Home</a>
+                <a href="solution.html">Solution</a>
+                <a href="features.html">Features</a>
+                <a href="how-it-works.html">How It Works</a>
+                <a href="faq.html">FAQ</a>
+                <a href="comparison.html">Compare</a>
+                <a href="blog.html">Blog</a>
+            </div>
+            <div style="font-size: 0.82rem; color: var(--text-muted);">© 2026 OpeninYoutube. All Rights Reserved.</div>
+        </div>
+    </footer>
+
+    <script>
+        // Theme toggle logic
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', savedTheme);
+        themeToggle.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+
+        themeToggle.addEventListener('click', () => {
+            const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+            themeToggle.textContent = next === 'dark' ? '☀️' : '🌙';
+        });
+
+        // Mobile menu
+        document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+            document.getElementById('mobileMenu').classList.toggle('open');
+            document.getElementById('icon-open').classList.toggle('hidden');
+            document.getElementById('icon-close').classList.toggle('hidden');
+        });
+
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                const isOpen = answer.classList.contains('open');
+
+                // Close all others
+                document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+                document.querySelectorAll('.faq-question').forEach(q => q.classList.remove('active'));
+
+                // Open clicked if it wasn't open
+                if (!isOpen) {
+                    answer.classList.add('open');
+                    button.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
